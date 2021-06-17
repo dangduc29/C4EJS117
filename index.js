@@ -1,135 +1,151 @@
+// // Cau 1; 1,2
+// const product = {
+//     name: 'Xiaomi rice cooker',
+//     price: 1700,
+//     brand: 'Xiaomi',
+//     color: 'white'
+// };
 
-// //Bài tập homework:
-//         //Câu 1:
-//         //VD 1:
-//         {        let a = 5, b = 6;
-//         [a, b] = [b, a];
-//         console.log(`${a} ${b}`);
-
-//         };
-//         //VD 2:
-//         {
-//         let a = 6, b = 5;
-//         a = c ;
-//         b = a ;
-//         b = c ;
-//         console.log (a, b); 
+// for (let x in product) {
+//     console.log(x);
 // }
-// //Bài 2:
-//         { const s = 'Hello , beauty , there';
-//          const a = s.split(', ');
-//          console.log( a );
+
+// for (let x in product) {
+//     console.log(x + ': ' + product[x]);
+// }
+// // Cau 2
+// const task = {
+//     subject: 'Implement login feature',
+//     createdBy: 'Hoang Ngoc Duc',
+//     assignTo: 'Nguyen Phuong Nam',
+//     dueDate: '2019-10-08T18:00:24+0000',
+//     expectedHours: 0.5,
+// };
+// let { subject, dueDate, assignTo } = task;
+// console.log('subject' + ": " + subject);
+// console.log('dueDate' + ": " + dueDate);
+// console.log('assignTo' + ": " + assignTo);
+// Cau 3
+// 3.1 Data type of the outermost layer is Object
+// 3.2 Hits property is Array
+// 3.3 
+// for(let item of jobSearch.hits) {
+//     console.log(item);
+// }
+// Câu 4;
+// alert("Hi there, this is dev dictionary");
+// let a = prompt("Enter a keyword");
+// let items;
+// let b;
+// while (true) {
+//     if (a == '') alert("You cannot leave it blank");
+//     else if (a == undefined) break;
+//     else {
+//         items = dictionary[a];
+//         if (items != undefined) {
+//             alert(`${a}\n` + items);
+//             break;
 //         }
-// //Bài 3:
-//         { const a = [4, 5, 7, -8];
-//         console.log(...a); }       
-//Bài 4; 
-                // let shop = ['Jeans', 'T-Shirt', 'Socks'];
-                // let init;
-                // let item, index;
-                // while(true){
-                // init = prompt('Hi there, welcome to shop admin panel, what do you want (C, R, U, D)?');
-                // if(init == undefined){
-                //         alert("Thanks");
-                //         break;
-                // }
-                // else if(init == "c"){
-                //         item = prompt('Enter the name of the new item');
-                //         shop.push(item);
-                //         alert("Done");
-                // }
-                // else if(init == "r"){
-                //         for(let i = 0; i < shop.length; i++) console.log((i + 1) + ". " + shop[i]);
-                //         break;
-                
-                // }
-                // else if(init == "u"){
-                //         index = Number(prompt("Enter the position"));
-                //         item = prompt('Enter the name of the new item');
-                //         shop[index - 1] = item;
-                //         alert("Done");
-                // }
-                // else if(init == "d"){
-                //         index = Number(prompt("Enter the position"));
-                //         shop.splice(index-1, 1);
-                //         alert("Done");
-                // }
-                
-                // else{
-                //         alert("This command is not supported");
-                // }
-                // }        
-//bài 5
-        //  {      let x = [], sum = 0;
-        //         let y = prompt("Enter a squence of Number, separated by commas (,)");
-        //         x = y.split(",");
-        //         for(let i = 0; i < x.length; i++) sum += Number(x[i]);
-        //         alert(`The sum of them is ${sum}`);
-        // }
-// //Bài 6:
-                // let a = [], b = 0, min;
+//         else {
+//             while (true) {
+//                 b = prompt("Update your dictionary");
+//                 if (b == '') alert("You must add dictionary");
+//                 else if (b == null) {
+//                 let x = confirm("Do you want exit?");
+//                 if (x) break;
+//                 }
+//                 else {
+//                 dictionary[p] = b;
+//                 alert("Done");
+//                 break;
+//                 }
+//             }
+//         }
+//     }
+//     a = prompt("Enter a keyword");
+// }
+//Câu 5;
+let products = [
+    {
+        name: 'Xiaomi portable charger 20000mah',
+        brand: 'Xiaomi',
+        price: 428,
+        color: 'White',
+        category: 'Charger',
+        providers: 'Phukienzero Dientuccc',
+    },
+    {
+        name: 'VSmart Active 1',
+        brand: 'VSmart',
+        price: 5487,
+        color: 'Black',
+        category: 'Phone',
+        providers: 'Tgdd Ddghn VhStore',
+    },
+    {
+        name: 'IPhone X',
+        brand: 'Apple',
+        price: 21490,
+        color: 'Gray',
+        category: 'Phone',
+        providers: 'Tgdd',
+    },
+    {
+        name: 'Samsung Galaxy A9',
+        brand: 'Samsung',
+        price: 8490,
+        color: 'Blue',
+        category: 'Phone',
+        providers: 'Tgdd',
+    },
+];
 
-                // let init = prompt("Enter a squence of Number, separated by commas (,)");
+for (let i = 0; i < products.length; i++) {
+    console.log('-------------------------------------');
+    console.log(`${i + 1}.`+' Name:'+products[i].name);
+    console.log('Price:'+products[i].price);
+}
+for (let i = 0; i < products.length; i++) {
+    let p = products[i];
+    console.log(`#${Number(i) + 1}` + '. ' + p.name);
+    console.log('Price: ' + p.price);
+}
+let n = prompt('Enter the position');
+let x = products[n - 1];
+console.clear();
+for (let items in x) {
+    console.log(items + ': ' + x[items]);
+}
+let a = prompt('Enter your category?');
+let b = a.charAt(0).toUpperCase() + a.slice(1);
+console.clear();
+for(let items in product){
+    if(product[items].category == word){
+        console.log('------------------------------');
+        console.log('Name: ' + product[items].name);
+        console.log('Price: ' + product[items].price);
+    }
+}
+console.clear();
+for(let items of product){
+    console.log("---------------------------------");
+    console.log("Name: " + items.name);
+    console.log("Price: " + items.price);
+    console.log('Providers: ' + items.providers);
+}
+let a = prompt("Enter provider");
+let b = init.charAt(0).toUpperCase() + init.slice(1);
+console.clear();
+for (let i = 0; i < product.length; i++) {
+    let listProvider = product[i].providers.split(' ');
+    if (listProvider.indexOf(b) != -1) {
+        console.log('-----------------------------');
+        console.log('Name: ' + product[i].name);
+        console.log('Brand: ' + product[i].brand);
+        console.log('Price: ' + product[i].price);
+        console.log('Color: ' + product[i].color);
+        console.log('Category: ' + product[i].category);
+        console.log('Providers: ' + product[i].providers);
+    }
+}
 
-                // a = init.split(",");
-
-                // min = Number(a[0]);
-                // for(let i = 1; i < a.length; i++){
-                //    if(Number(a[i]) < min) min = Number(a[i]);
-                // }
-                // alert(`The smallest number is ${min}`);
-// //Bài 7:
-        //          const a = [23,34,45,56,67,78];
-        //          let b = Number(prompt('Nhập số cần tìm'));
-        //          for(let i = 0;i<a.length;i++);
-        //          if(b == a[i]){{
-        //         alert('{b} đã tìm thấy trong mảng của tôi'+ i );
-        //         console.log('không có số bạn cần trong mảng của tôi');
-        //          } break;}
-        //         else {
-        //                 b(Number(prompt)('NHập số cần tìm'));
-        //                 alert('Số bạn cần là' + b);
-        //                 break;
-                        
-
-        //      {  { const x = [3, 4, 6, -9, 10, -88, 2];
-        //         let a = 0;
-        //         let b = Number(prompt('Nhập số bạn cần tìm' ));
-        //         for (i = 0;i < x.length;i++);
-        //         if (b = x[i]);
-        //          {
-        //                 alert('${ b } Số bạn cần + x');
-        //         }}
-        //         if 
-                 
-        //                 (alert (b != 1)('{ b } Không tìm thấy')
-                
-        //      }
-
-
-//Bài 8:
-        //        { let cuu = [5, 7, 300, 90, 24, 50, 75];
-        //         console.log('Hello, here is my sheep sizes');           
-        //         console.log(...cuu);
-        //         console.log('Now my biggest sheep has size ' + Math.max(...cuu));
-        //         console.log('After shearing, here is my flock');
-        //         cuu[cuu.indexOf(Math.max(...cuu))] = 8;
-        //         console.log(...cuu);
-        //         let a;
-        //                 for (a = 0; a < cuu.length; a++)cuu[a] += 50;              
-        //         console.log("After one month\n");
-        //         console.log(...cuu);
-        //         let b = Number(prompt('nhập số tháng'));
-        //         let c = 1;
-        //         while(c <= b) {
-        //                 for (a = 0; a < cuu.length; a++)cuu[a] += 50;              
-        //         console.log("After one month\n");
-        //         console.log(...cuu);
-        //         }
-                            
-        // }
-        //         let sum = 0;
-        //         for(let i = 0;i < cuu.length;i++)sum + cuu[i];
-        //         console.log(`Total size: ${sum}`);
-        //         console.log("I would get " + sum*2);
-             
