@@ -1,151 +1,95 @@
-// // Cau 1; 1,2
-// const product = {
-//     name: 'Xiaomi rice cooker',
-//     price: 1700,
-//     brand: 'Xiaomi',
-//     color: 'white'
+// //Bài 1:
+// // Câu 1
+// let a = Math.random()
+//     console.log(a)
+// // Câu 2
+// let x = [2,5,6,9,10];
+// let show = x[Math.floor(Math.random() * x.length)];
+// console.log (show);
+// // Câu 3
+// let a = {
+//     1 : 'None',
+//     2 : '4 legs',
+//     3 : '8 legs',
+//     4 : '12 legs',
 // };
-
-// for (let x in product) {
-//     console.log(x);
-// }
-
-// for (let x in product) {
-//     console.log(x + ': ' + product[x]);
-// }
-// // Cau 2
-// const task = {
-//     subject: 'Implement login feature',
-//     createdBy: 'Hoang Ngoc Duc',
-//     assignTo: 'Nguyen Phuong Nam',
-//     dueDate: '2019-10-08T18:00:24+0000',
-//     expectedHours: 0.5,
-// };
-// let { subject, dueDate, assignTo } = task;
-// console.log('subject' + ": " + subject);
-// console.log('dueDate' + ": " + dueDate);
-// console.log('assignTo' + ": " + assignTo);
-// Cau 3
-// 3.1 Data type of the outermost layer is Object
-// 3.2 Hits property is Array
-// 3.3 
-// for(let item of jobSearch.hits) {
-//     console.log(item);
-// }
-// Câu 4;
-// alert("Hi there, this is dev dictionary");
-// let a = prompt("Enter a keyword");
-// let items;
-// let b;
 // while (true) {
-//     if (a == '') alert("You cannot leave it blank");
-//     else if (a == undefined) break;
-//     else {
-//         items = dictionary[a];
-//         if (items != undefined) {
-//             alert(`${a}\n` + items);
-//             break;
-//         }
-//         else {
-//             while (true) {
-//                 b = prompt("Update your dictionary");
-//                 if (b == '') alert("You must add dictionary");
-//                 else if (b == null) {
-//                 let x = confirm("Do you want exit?");
-//                 if (x) break;
-//                 }
-//                 else {
-//                 dictionary[p] = b;
-//                 alert("Done");
-//                 break;
-//                 }
-//             }
-//         }
+//     let n = Number(prompt(`How many legs does a spider have?\n` + a ))
+//     if (n == null || n == undefined) {
+//         aler t('GoodBye!');
+//         break;
 //     }
-//     a = prompt("Enter a keyword");
+//     else if(n==3){
+//         alert('Bravo, you are correct');
+//         break;
+//     }
+//     else{
+//         alert('Good luck next time');
+//     }
 // }
-//Câu 5;
-let products = [
-    {
-        name: 'Xiaomi portable charger 20000mah',
-        brand: 'Xiaomi',
-        price: 428,
-        color: 'White',
-        category: 'Charger',
-        providers: 'Phukienzero Dientuccc',
-    },
-    {
-        name: 'VSmart Active 1',
-        brand: 'VSmart',
-        price: 5487,
-        color: 'Black',
-        category: 'Phone',
-        providers: 'Tgdd Ddghn VhStore',
-    },
-    {
-        name: 'IPhone X',
-        brand: 'Apple',
-        price: 21490,
-        color: 'Gray',
-        category: 'Phone',
-        providers: 'Tgdd',
-    },
-    {
-        name: 'Samsung Galaxy A9',
-        brand: 'Samsung',
-        price: 8490,
-        color: 'Blue',
-        category: 'Phone',
-        providers: 'Tgdd',
-    },
-];
+// B4
+// let x = ['to', 'be', 'that', 'of', 'elon', 'to', 'this', 'now', 'back', 'cool', 'hey', 'love', 'of',
+//            'life', 'that', 'rain', 'summer', 'color', 'now', 'of', 'hat', 'late', 'sorry', 'my', 'team']
+//            countData = {};
+//            for (i=0; i < x.length; i++) {
+//                c = x[i];
+//                if(countData[c]){
+//                    countData[c] ++;
+//                }
+//                else{
+//                    countData[c] = 1;
+//                }
+//            }
+// console.log(countData)
+// B5
+// const a = [
+//     {
+//         name: 'HP Envy 13aq',
+//         price: 21000,
+//         brand: 'HP',
+//         quantity: 5,
+//     },
+//     {
+//         name: 'Dell XPS 9370',
+//         price: 30000,
+//         brand: 'Dell',
+//         quantity: 1,
+//     },
+//     {
+//         name: 'Dell Inspiron 3567',
+//         price: 9300,
+//         brand: 'Dell',
+//         quantity: 12,
+//     },
+//     {
+//         name: 'Dell Latitude E5450',
+//         price: 8600,
+//         brand: 'Dell',
+//         quantity: 2,
+//     },
 
-for (let i = 0; i < products.length; i++) {
-    console.log('-------------------------------------');
-    console.log(`${i + 1}.`+' Name:'+products[i].name);
-    console.log('Price:'+products[i].price);
-}
-for (let i = 0; i < products.length; i++) {
-    let p = products[i];
-    console.log(`#${Number(i) + 1}` + '. ' + p.name);
-    console.log('Price: ' + p.price);
-}
-let n = prompt('Enter the position');
-let x = products[n - 1];
-console.clear();
-for (let items in x) {
-    console.log(items + ': ' + x[items]);
-}
-let a = prompt('Enter your category?');
-let b = a.charAt(0).toUpperCase() + a.slice(1);
-console.clear();
-for(let items in product){
-    if(product[items].category == word){
-        console.log('------------------------------');
-        console.log('Name: ' + product[items].name);
-        console.log('Price: ' + product[items].price);
-    }
-}
-console.clear();
-for(let items of product){
-    console.log("---------------------------------");
-    console.log("Name: " + items.name);
-    console.log("Price: " + items.price);
-    console.log('Providers: ' + items.providers);
-}
-let a = prompt("Enter provider");
-let b = init.charAt(0).toUpperCase() + init.slice(1);
-console.clear();
-for (let i = 0; i < product.length; i++) {
-    let listProvider = product[i].providers.split(' ');
-    if (listProvider.indexOf(b) != -1) {
-        console.log('-----------------------------');
-        console.log('Name: ' + product[i].name);
-        console.log('Brand: ' + product[i].brand);
-        console.log('Price: ' + product[i].price);
-        console.log('Color: ' + product[i].color);
-        console.log('Category: ' + product[i].category);
-        console.log('Providers: ' + product[i].providers);
-    }
-}
+//     {
+//         name: 'Asus Zenbook',
+//         brand: 'Asus',
+//         price: 20000,
+//         quantity: 4,
+//     },
+//     {
+//         name: 'HP Pavilion',
+//         brand: 'HP',
+//         price: 14000,
+//         quantity: 7,
+//     },
+// ]
 
+// let b = {
+//     'HP': [],
+//     'Dell':[],
+//     'Asus':[],
+// };
+// for (i = 0; i < a.length; i++) {
+//     let kml = a[i];
+//     let brand = kml.brand;
+//     b[brand].push(kml)
+// }
+// console.log(b)
